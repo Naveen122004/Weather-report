@@ -1,0 +1,37 @@
+{
+  "name": "weather-report-generator",
+  "version": "1.0.0",
+  "description": "A modern, responsive web application that generates real-time weather reports using the OpenWeatherMap API",
+  "main": "script.js",
+  "keywords": [
+    "weather",
+    "weather-app",
+    "openweathermap",
+    "javascript",
+    "responsive",
+    "web-app"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 3000",
+    "test": "echo \"Run tests here\"",
+    "build": "echo \"Build process here\""
+  },
+  "devDependencies": {
+    "http-server": "^14.1.0",
+    "prettier": "^2.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/weather-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/weather-app/issues"
+  },
+  "homepage": "https://github.com/your-username/weather-app#readme"
+}

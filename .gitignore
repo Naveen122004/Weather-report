@@ -1,0 +1,38 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Editor & IDE Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.atom/
+*.code-workspace
+
+# Node Modules (if using npm in future)
+node_modules/
+package-lock.json
+
+# Build & Distribution
+dist/
+build/
+*.bundle.js
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Your Local Notes
+notes.txt

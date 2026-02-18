@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">Weather Report</h1>
+            <p class="subtitle">Get real-time weather information</p>
+        </header>
+
+        <!-- Controls Section -->
+        <div class="controls-section">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    class="search-input" 
+                    placeholder="Enter city name..." 
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="btn btn-primary">Get Weather</button>
+            </div>
+
+            <!-- Geolocation Button -->
+            <button id="geoBtn" class="btn btn-secondary">📍 Use My Location</button>
+
+            <!-- Theme Toggle -->
+            <button id="themeBtn" class="btn btn-theme">🌙 Dark Mode</button>
+        </div>
+
+        <!-- Error Messages -->
+        <div id="errorMsg" class="error-message"></div>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <!-- Weather Card (Hidden Initially) -->
+        <div id="weatherCard" class="weather-card hidden">
+            <div class="weather-header">
+                <h2 id="location" class="location-name">City Name</h2>
+                <button id="closeBtn" class="btn-close">✕</button>
+            </div>
+
+            <div class="weather-main">
+                <div class="weather-icon-container">
+                    <img id="weatherIcon" src="" alt="weather icon" class="weather-icon">
+                </div>
+                <div class="temperature-section">
+                    <span id="temperature" class="temperature">--°C</span>
+                    <span id="condition" class="weather-condition">--</span>
+                </div>
+            </div>
+
+            <!-- Weather Details Grid -->
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="detail-icon">💧</span>
+                    <span class="detail-label">Humidity</span>
+                    <span id="humidity" class="detail-value">--%</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">💨</span>
+                    <span class="detail-label">Wind Speed</span>
+                    <span id="windSpeed" class="detail-value">-- m/s</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">🌡️</span>
+                    <span class="detail-label">Feels Like</span>
+                    <span id="feelsLike" class="detail-value">--°C</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">🔽</span>
+                    <span class="detail-label">Pressure</span>
+                    <span id="pressure" class="detail-value">-- hPa</span>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="additional-info">
+                <div class="info-row">
+                    <span class="info-label">Timezone:</span>
+                    <span id="timezone" class="info-value">--</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Coordinates:</span>
+                    <span id="coordinates" class="info-value">--</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Searches Section -->
+        <div class="recent-searches hidden" id="recentSearches">
+            <h3>Recent Searches</h3>
+            <div id="recentList" class="recent-list"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Weather Report Generator | Powered by OpenWeatherMap API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
